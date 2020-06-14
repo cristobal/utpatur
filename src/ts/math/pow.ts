@@ -12,6 +12,6 @@ export default function pow (x: number, n: number):number {
   }
 
   // odd number
-  return x * pow(x *x, (n -1) / 2)
+  return x * pow(x * x, (n -1) / 2)
 }
 
