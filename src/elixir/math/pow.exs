@@ -7,23 +7,21 @@
 defmodule Pow do
   @spec pow(integer(), integer()) :: integer()
   def pow(x, n) do
-    result =
-      cond do
-        # initial condition
-        n == 1 -> x
+    cond do
+      # initial condition
+      n == 1 -> x
 
-        # even number
-        rem(n, 2) == 0 -> pow(
-          x * x,
-          Kernel.trunc(n / 2)
-        )
+      # even number
+      rem(n, 2) == 0 -> pow(
+        x * x,
+        Kernel.trunc(n / 2)
+      )
 
-        # odd number
-        true -> x * pow(
-          x * x,
-          Kernel.trunc((n - 1) / 2)
-        )
-      end
-      result
+      # odd number
+      true -> x * pow(
+        x * x,
+        Kernel.trunc((n - 1) / 2)
+      )
+    end
   end
 end
