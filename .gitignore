@@ -1,3 +1,4 @@
 scratch
 .vscode
 .elixir_ls
+__pycache__
